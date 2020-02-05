@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family:'Montserrat',sans-serif;
+}
+
+h1 {
+  margin: 20px;
+  color: #00a07b;
+}
+
+.app {
+  display: flex;
+  flex-flow: row;
+}
+
+.txn {
+  width: 80%;
+  margin: 20px;
+}
+
+.category {
+  width: 20%;
+  margin: 20px;
+}
+
+.txn-table {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: .8rem;
+  margin: 0.5rem;
+  line-height: 1.5;
+  flex: 1 1 auto;
+}
+
+.txn-header {
+  display: none;
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
+.txn-header > .txn-data {
+  white-space: normal;
+}
+
+.txn-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.txn-row:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+.txn-row:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.txn-row:hover {
+  color: #00a07b;
+}
+
+.txn-data {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5em;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  white-space: nowrap;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+
+.category-list {
+  background-color: #00a07b;
+  color: white;
+  margin-top: 50px;
+}
+
+.category-data {
+  padding: 0.5em;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  white-space: nowrap;
+}
+
+
+select {
+  float:right;
+  padding:8px 12px;
+  border:2px solid #78788c;
+  background:0;color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s;
+}
+
+input {
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  resize:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;
+  transition:all .3s;
+  border-bottom:2px solid #d0d0d0;
+}
+
+input:focus {
+  border-bottom:2px solid #00a07b;
+}
+
+button {
+  float:right;
+  padding:8px 12px;
+  margin:20px 0px 20px 0px;
+  border:2px solid #00a07b;
+  background:0;
+  color:black;
+  cursor:pointer;
+  transition:all .3s;
+}
+
+button:hover {
+  background:#00a07b;
+  color:#fff;
+  border: 2px solid #00a07b;
+}
+
+.category-form {
+  margin-top: 2px;
+  display: flex;
+  flex-flow: column;
+}
+
+.checkoutbox {
+    background-color: #FEBD69;
+    width: 300px;
+    border: 10px black;
+    padding: 10px;
+    margin: 100px;
+    text-align: center;
+  }
+  .buynowbox {
+    background-color: #FF9900;
+    width: 300px;
+    border: 10px black;
+    padding: 10px;
+    margin: 100px;
+    text-align: center;
+  }
+  .button{
+  background-color: #f2f2f2;
+  border: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+  /* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*shopping cart stuff*/
+/* url stuff in here
+"continue shopping"
+"checkout"
+along with update cart and total"
+*/
+.shopping-cart {width: 100%; border-top: 1px solid #C3C3C3; border-right: 1px solid #C3C3C3; clear: both;}
+.shopping-cart th {background: #F0F0F0;}
+.shopping-cart th, .shopping-cart td {border-bottom: 1px solid #C3C3C3; border-left: 1px solid #C3C3C3; padding: 3px;}
+.shopping-cart .link {font-size: 90%; white-space: nowrap;}
+.shopping-cart .product {width: 55%}
+.shopping-cart .price {width: 5%;}
+.shopping-cart .quantity {width: 15%;}
+.shopping-cart .quantity input {width: 30px;}
+.shopping-cart .price {width: 20%;}
+.shopping-cart .product-img {border: 1px solid #ccc; background-color: #e9e9e9; padding: 3px; width: 80px; height: 80px; float: left;}
+.shopping-cart .product-img img {max-width:80px;max-height:80px;width:auto;height:auto;}
+.shopping-cart .product-name {margin-left: 100px;}
+.shopping-cart tr.totals {font-weight: bold;}
+.shopping-cart tr.totals a {font-weight: normal;}
+.shopping-cart .quantity-span {text-align: right;}
+.coupon {margin:20px 0 0;text-align:right;}
+.continue-shopping {float:left;margin:20px 0;}
+.checkout-button {float: right; margin: 20px 0; font-weight: bold;}
+
+/* shopping cart end */
+
+/*grid stuff,*/
+.wrapper {
+  grid-template-columns: 3fr 1fr 1fr;
+ }
+ .letter {
+  background-color: #0069b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 70px;
+  color: white;
+  line-height: 1;
+  font-family: 'hobeaux-rococeaux-background';
+  font-weight: 200;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+/*grid stuff EWNDDDDD*/
+ul {
+  list-style-type: none;
+  margin-right:985px;
+  padding: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  margin-left: 500px;
+  background-color: #333;
+ 
+}
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.price_inside_buybox
+{
+  text-decoration-color: crimson
+}
+        
+    
